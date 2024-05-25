@@ -6,8 +6,8 @@ The goal of **The Sebvu Project** is to give myself a solid base preperation for
 
 - Leetcode commits will be formatted in a way of an answer submission to a leetcode problem, followed by an explanation of the solution. All questions will be done in python.
 
-- Odin Project commits will be formatted in directories to a mix of project githubs and a mix of experimental programming files.
-
 ## Leetcode Commit
 
 ## Odin Project Commit
+
+- 2024-05-25: Starting off on HTML basics, new experimental file in [HTML boiler plates](./the-odin-project/html-boiler-plate/index.html)

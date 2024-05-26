@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Installing Arch Manually</title>
   </head>
 
@@ -11,10 +11,16 @@
 
     <p>So you're interesting in installing <em>Arch Linux</em>?</p>
     <p>And you want to <em>manually</em> install it?</p>
-    <p>Then you've come to the right place! Screw install scripts. We're doing it manual labor</p>
+    <p>
+      Then you've come to the right place! Screw install scripts. We're doing it
+      manual labor
+    </p>
 
     <h2>Pre-Requisites</h2>
-    <p>We will be <em>dual booting</em> on our system, so here are the pre-requisites.</p>
+    <p>
+      We will be <em>dual booting</em> on our system, so here are the
+      pre-requisites.
+    </p>
     <p>This blog post is <em>assumimg</em> you are operating on Windows 11.</p>
     <ul>
       <li>x86_64 (i.e. 64 bit) compatible machine</li>
@@ -26,33 +32,95 @@
 
     <h2>Installing Arch Linux</h2>
     <h3>Creating Partitions</h3>
-    <p>Open windows search bar, and type <strong>diskmgmt</strong> to access disk manager where you can view all connected drives and their respective partitions.</p>
-    <p>From here, you want to look for your drive of choice (typically (C: D: E:, or maybe under another alias) and <strong>shrink a minimum of 20GB</strong> of space for Arch Linux.</p>
-    <p>This will create an unallocated free space. Now we have free space for installing Arch Linux!</p>
+    <p>
+      Open windows search bar, and type <strong>diskmgmt</strong> to access disk
+      manager where you can view all connected drives and their respective
+      partitions.
+    </p>
+    <p>
+      From here, you want to look for your drive of choice (typically (C: D: E:,
+      or maybe under another alias) and
+      <strong>shrink a minimum of 20GB</strong> of space for Arch Linux.
+    </p>
+    <p>
+      This will create an unallocated free space. Now we have free space for
+      installing Arch Linux!
+    </p>
 
     <h3>Downloading ISO</h3>
-    <p>Choose the closes mirror to your location, then download the Arch ISO here.<a href="https://archlinux.org/download/">here.</a></p>
-    <p>Connect your USB stick to your computer. We will be burning our ISO into our USB using <a href="https://rufus.ie/en/">rufus</a> and creating a <strong>bootable USB drive</strong></p> 
-    <p><strong>WARNING: THIS WILL WIPE ANY CONTENTS IN YOUR USB STICK</strong></p>
-    <p>Open rufus, and <em>select boot selection</em> and look for your downloaded archlinux ISO.</p>
-    <p>Once it is selected, click start, agree to all of the options, and wait.</p>
-    <p>Once you have created your bootable USB, it is time to create a restore point.</p>
+    <p>
+      Choose the closes mirror to your location, then download the Arch ISO
+      here.<a href="https://archlinux.org/download/">here.</a>
+    </p>
+    <p>
+      Connect your USB stick to your computer. We will be burning our ISO into
+      our USB using <a href="https://rufus.ie/en/">rufus</a> and creating a
+      <strong>bootable USB drive</strong>
+    </p>
+    <p>
+      <strong>WARNING: THIS WILL WIPE ANY CONTENTS IN YOUR USB STICK</strong>
+    </p>
+    <p>
+      Open rufus, and <em>select boot selection</em> and look for your
+      downloaded archlinux ISO.
+    </p>
+    <p>
+      Once it is selected, click start, agree to all of the options, and wait.
+    </p>
+    <p>
+      Once you have created your bootable USB, it is time to create a restore
+      point.
+    </p>
 
     <h3>Windows Restore Point</h3>
-    <p>We are going to taking a <em>snapshot</em>of the current state of windows system.</p>
-    <p>In windows search bar, search up <strong>Create a restore point</strong>, click on your current drive, click on 'create a restore point' and click okay.</p>
-    <p>If anything goes wrong with the arch installation, you can reboot to that saved window state.</p>
+    <p>
+      We are going to taking a <em>snapshot</em>of the current state of windows
+      system.
+    </p>
+    <p>
+      In windows search bar, search up <strong>Create a restore point</strong>,
+      click on your current drive, click on 'create a restore point' and click
+      okay.
+    </p>
+    <p>
+      If anything goes wrong with the arch installation, you can reboot to that
+      saved window state.
+    </p>
     <p>Once that is done, we will now be going to our UEFI settings.</p>
 
     <h3>UEFI Settings</h3>
-    <p>Search up in your windows search bar <strong>UEFI settings</strong> and choose to reeboot to UEFI settings. You can also restart you system and spam <em>F12 + F2 (may vary with different computers)</em>.
-    <p>Navigate to your UEFI settings, <strong>enable</strong> USB boot, and <strong>set boot priorty></strong> for <strong>USB drive.</strong> You will also have to <strong>disable</strong> secure boot option.</p> 
-    <p>You can now restart your system. You will see a few bootable options, <strong>choose Arch Linux</strong></p>
+    <p>
+      Search up in your windows search bar <strong>UEFI settings</strong> and
+      choose to reeboot to UEFI settings. You can also restart you system and
+      spam <em>F12 + F2 (may vary with different computers)</em>.
+    </p>
+    <p>
+      Navigate to your UEFI settings, <strong>enable</strong> USB boot, and
+      <strong>set boot priorty></strong> for <strong>USB drive.</strong> You
+      will also have to <strong>disable</strong> secure boot option.
+    </p>
+    <p>
+      You can now restart your system. You will see a few bootable options,
+      <strong>choose Arch Linux</strong>
+    </p>
     <p>You are now in arch linux!</p>
 
     <h3>Booted up Arch Linux!</h3>
-    <p>You will be presented with a command line. To make it readable, increase the font size by typing <code>setfont ter-132n</code></p>
-    <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
-
+    <p>
+      You will be presented with a command line. To make it readable, increase
+      the font size by typing <code>setfont ter-132n</code>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
+      occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat
+      officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in
+      Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
+      excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco
+      ut ea consectetur et est culpa et culpa duis.
+    </p>
   </body>
 </html>

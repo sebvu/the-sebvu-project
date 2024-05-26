@@ -14,3 +14,5 @@ The goal of **The Sebvu Project** is to give myself a solid base preperation for
 - 2024-05-25:
   - Working on [different types of texts in HTML](./the-odin-project/html-foundations/working-with-text-index.html)
   - [Manually Installing Arch Linux Blog Post (not finishing, just for practice)](./the-odin-project/html-foundations/index.html)
+- 2024-05-26 00:26
+  - Created [odin-links-and-images](./the-odin-project/html-foundations/odin-links-and-images/index.html)

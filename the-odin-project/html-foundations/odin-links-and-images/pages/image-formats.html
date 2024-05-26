@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image Formats</title>
+  </head>
+
+  <body>
+    <h1>Image Formats</h1>
+    <p>
+      There’s four main image formats in use on the web, and they were all designed to do different things. Understanding their intended purpose goes
+      a long way towards improving the quality of your web pages.
+    </p>
+    <ul>
+      <li>JPG</li>
+      <li>GIF</li>
+      <li>PNG</li>
+      <li>SVG</li>
+    </ul>
+    <p>The next few sections will walk through ideal use cases for each of these image formats.</p>
+
+    <h2>JPG</h2>
+    <p>
+      PG images are designed for handling large color palettes without exorbitantly increasing file size. This makes them great for photos and images
+      with lots of gradients in them. On the other hand, JPGs don’t allow for transparent pixels, which you can see in the white edges of the image
+      below if you look real close:
+    </p>
+    <img src="../images/mochi.jpg" alt="Mochi jpg" />
+    <h2>GIF</h2>
+    <p>
+      GIFs are the go-to option for simple animations, but the trade off is that they’re somewhat limited in terms of color palette—never use them for
+      photos. Transparent pixels are a binary option for GIFs, meaning you can’t have semi-opaque pixels. This can make it difficult to get high
+      levels of detail on a transparent background. For this reason, it’s usually better to use PNG images if you don’t need animation.
+    </p>
+    <img src="../images/mochi.gif" alt="Mochi gif" />
+    <h2>PNG</h2>
+    <p>
+      PNGs are great for anything that’s not a photo or animated. For photos, a PNG file of the same quality (as perceived the human eye) would
+      generally be bigger than an equivalent JPG file. However, they do deal with opacity just fine, and they don’t have color palette limitations.
+      This makes them an excellent fit for icons, technical diagrams, logos, etc.
+    </p>
+    <img src="../images/mochi.png" alt="Mochi png" />
+    <h2>SVG</h2>
+    <p>
+      Unlike the pixel-based image formats above, SVG is a vector-based graphics format, meaning it can scale up or down to any dimension without loss
+      of quality. This property makes SVG images a wonderful tool for responsive design. They’re good for pretty much all the same use cases as PNGs,
+      and you should use them whenever you can.
+    </p>
+    <img src="../images/mochi.svg" alt="Mochi svg" width="100" height="100" />
+    <img src="../images/mochi.svg" alt="Mochi svg" width="300" height="300" />
+    <br />
+    <img src="../images/mochi.png" alt="Mochi png" width="100" height="100" />
+    <img src="../images/mochi.png" alt="Mochi png" width="300" height="300" />
+    <p>
+      These 300×300 pixel images were originally 100×100 pixels, but scaling them up clearly shows the difference between them. Notice the crisp,
+      clean lines on the top SVG image, while the PNG image on the bottom is now very pixelated.
+    </p>
+  </body>
+</html>

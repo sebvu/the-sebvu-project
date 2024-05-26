@@ -13,4 +13,4 @@ The goal of **The Sebvu Project** is to give myself a solid base preperation for
 - 2024-05-25: Starting off on HTML basics, new experimental file in [HTML foundations folder](./the-odin-project/html-foundations/index.html)
 - 2024-05-25:
   - Working on [different types of texts in HTML](./the-odin-project/html-foundations/working-with-text-index.html)
-  - [Manually Installing Arch Linux Blog Post (not finishing, just for practice)](./the-odin-project/html-foundations/blog-post/index.html)
+  - [Manually Installing Arch Linux Blog Post (not finishing, just for practice)](./the-odin-project/html-foundations/index.html)

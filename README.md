@@ -16,3 +16,4 @@ The goal of **The Sebvu Project** is to give myself a solid base preperation for
   - [Manually Installing Arch Linux Blog Post (not finishing, just for practice)](./the-odin-project/html-foundations/index.html)
 - 2024-05-26 00:26
   - Created [odin-links-and-images](./the-odin-project/html-foundations/odin-links-and-images/index.html)
+  - Add multiple connected pages, and a [page that differentiates PNG, SVG, JPG and GIF](./the-odin-project/html-foundations/odin-links-and-images/pages/image-formats.html)

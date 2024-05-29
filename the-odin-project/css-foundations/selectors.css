@@ -1,0 +1,45 @@
+/* universal selector */
+* {
+  font-size: 16px;
+}
+
+/* type selector */
+h1 {
+  color: transparent;
+}
+
+/* class selector */
+.class-example {
+  color: red;
+}
+
+/* id selector */
+#id-example {
+  color: rgb(100, 0, 127);
+}
+
+/* class selector */
+.other-example {
+  background-color: hsl(15, 82% 56%);
+}
+
+/* another class selectory */
+.random-example {
+  color: #ff3009;
+}
+
+/* grouping selector is used to apply the same style to multiple selectors */
+.class-example,
+other-example {
+  font-size: 20px;
+}
+
+/* chaining selector applied when both classes are present */
+.class-example#id-example {
+  font-size: 30px;
+}
+
+/* descendant combinators will be applied if the child selected is nested inside the ancestors, regardless of how nested it is */
+.random-example .class-example .other-example {
+  font-size: 40px;
+}

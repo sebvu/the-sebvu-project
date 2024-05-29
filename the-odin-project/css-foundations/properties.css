@@ -1,0 +1,31 @@
+p {
+  /* hex example */
+  color: #ff0000;
+}
+
+h1 {
+  /* rgb example */
+  background-color: rgb(0, 255, 0);
+}
+
+h2 {
+  /* hsl example */
+  color: hsl(120, 100%, 50%);
+}
+
+div {
+  /* will go down the list until a valid font for broswer is supported */
+  /* font family name contains quotes, generic family name does not */
+  font-family: "Times New Roman", serif;
+  /* define font size  */
+  font-size: 16px;
+  /* affect boldness of text */
+  font-weight: bold; /* or number between 1 - 700 */
+  /* align text horizontally with element, and can define using common word values */
+  text-align: center;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+}

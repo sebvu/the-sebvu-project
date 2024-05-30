@@ -19,3 +19,8 @@ The goal of **The Sebvu Project** is to give myself a solid base preperation for
   - Add multiple connected pages, and a [page that differentiates PNG, SVG, JPG and GIF](./the-odin-project/html-foundations/odin-links-and-images/pages/image-formats.html)
 - 2024-05-28
   - Complete [recipe project](https://github.com/sebvu/sebvu-recipes)
+- 2024-05-29
+  - Start [css foundations](./the-odin-project/css-foundations)
+- 2024-05-30
+  - Began Python
+  - Added [Duplicate Integer solution)(./leetcode/DuplicateInteger/DuplicateInteger.md)

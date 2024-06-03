@@ -1,0 +1,40 @@
+* {
+  color: red;
+  font-weight: bold;
+}
+
+/* will apply whenever screen is 500px or less */
+@media all and (max-width: 500px) {
+  h1 {
+    color: blue;
+  }
+
+  h2 {
+    color: purple;
+  }
+}
+
+/* if actually printing, will print text orange! */
+@media print {
+  body {
+    color: orange;
+  }
+}
+
+/* when width is wider then height, */
+/* and if pixels below 500px */
+/* can also combine with AND */
+@media (orientation: landscape) and (max-width: 500px) {
+  h1 {
+    color: green;
+  }
+}
+
+/* when height is wider then width */
+/* OR when pixels above 500 */
+/* , is OR statement, so either or */
+@media (orientation: portrait), (min-width: 500px) {
+  h2 {
+    color: green;
+  }
+}

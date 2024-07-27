@@ -12,6 +12,7 @@
   border: 20px solid purple;
   margin: 60px;
   box-sizing: border-box;
+  font-style: italic;
   /* actual size of the content gets cut out */
 }
 

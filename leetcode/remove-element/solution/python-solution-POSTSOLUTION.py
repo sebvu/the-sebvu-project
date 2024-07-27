@@ -7,8 +7,7 @@ class Solution:
 
         for r in range(len(nums)):
             if nums[r] != val:
-                if r != l:
-                    nums[l] = nums[r]
+                nums[l] = nums[r]
                 l += 1
         return l
 

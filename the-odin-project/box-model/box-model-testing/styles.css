@@ -1,0 +1,20 @@
+p,
+ul {
+  font-weight: bold;
+  border: 2px solid rebeccaPurple;
+}
+
+span,
+li {
+  border: 2px solid blue;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.inline {
+  display: inline-flex;
+}

@@ -1,12 +1,17 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # if sorted(s) == sorted(t):
-        #     return False
-        # return True
 
-        for i in range(len(s) - 1):
-            if s[i] < s[i+1]:
-                
+        if len(s) == len(t):
+            for c in s:
+                matchingCharacterIndex = t.find(c)
+                if matchingCharacterIndex != -1:
+                    
+                else:
+                    return False
+        else:
+            return False
+        return True
+
 
 solution = Solution()
 

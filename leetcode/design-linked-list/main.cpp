@@ -1,85 +1,58 @@
 struct Node {
   int val;
-  Node *next;
-  Node(int val = 0, Node *next = nullptr) : val(val), next(next) {}
+  Node* next;
+  Node(int val = 0, Node* next = nullptr) : val(val), next(next) {}
 };
 
 class MyLinkedList {
 private:
-  Node *head;
+  Node* head;
 
 public:
-  MyLinkedList() { head = nullptr; }
+    MyLinkedList() : head(nullptr) {}
+    
+    int get(int index) {
+      if (head == nullptr) 
+	  	  return -1;
 
-  int get(int index) {
-    Node *curr = head;
+      Node *curr = head;
 
-    for (int i = 0; i < index; i++) {
-      if (!curr)
-        return -1;
-      curr = curr->next;
+      for (int i = 0; i < index; i++) {
+        if (curr == nullptr)
+          return -1;
+				curr = curr->next;
+      }
+	  return curr->val;
     }
-    return curr->val;
-  }
-
-  void addAtHead(int val) {
-    if (!head) {
-      head = new Node(val);
-    }
-    Node *newNode = new Node(val);
-    newNode->next = head;
-    head = newNode;
-  }
-
-  void addAtTail(int val) {
-    if (!head) {
-      head = new Node(val);
-      return;
-    }
-    Node *curr = head;
-    while (curr->next != nullptr)
-      curr = curr->next;
-    curr->next = new Node(val);
-  }
-
-  void addAtIndex(int index, int val) {
-    Node *curr = head;
-
-    for (int i = 0; i < index; i++) {
-      if (curr == nullptr) {
-        return;
-      } else if (curr->next == nullptr and i + 1 == index) {
+    
+    void addAtHead(int val) {
+      if (head == nullptr) {
         head = new Node(val);
-        return;
-      }
-      curr = curr->next;
+			} else {
+        Node *newNode = new Node(val, head);
+			head = newNode;
+			}
     }
-
-    if (curr == head) {
-      Node *newNode = new Node(val);
-      newNode->next = head;
-      head = newNode;
-    } else {
-      Node *tmp = curr->next;
-      curr->next = new Node(val);
-      curr->next->next = tmp;
+    
+    void addAtTail(int val) {
+      if (head == nullptr) {
+        head = new Node(val);
+			} else {
+        Node *curr = head;
+			while (curr->next != nullptr) 
+				curr = curr->next;
+			curr->next = new Node(val);
+			}
     }
-    return;
-  }
-
-  void deleteAtIndex(int index) {
-    Node *curr = head;
-
-    for (int i = 0; i < index; i++) {
-      if (curr == nullptr) {
-        return;
-      }
-      curr = curr->next;
+    
+    void addAtIndex(int index, int val) {
     }
-  }
+    
+    void deleteAtIndex(int index) {
+    }
 };
 
-/**ur
+/**
  * Your MyLinkedList object will be instantiated and called as such:
  * MyLinkedList* obj = new MyLinkedList();
  * int param_1 = obj->get(index);
@@ -88,3 +61,4 @@ public:
  * obj->addAtIndex(index,val);
  * obj->deleteAtIndex(index);
  */
+

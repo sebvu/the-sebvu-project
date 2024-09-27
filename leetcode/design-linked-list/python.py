@@ -1,65 +1,64 @@
 class Node:
-    def __init__(self, val: int = 0):
-        self.val = val
-        self.next = None
+    def __init__(self, var, prev=None, next=None):
+        self.val = var
+        self.next = next
+        self.prev = prev
 
 
 class MyLinkedList:
-    def __init__(self):
-        self.head = None
+
+    def __init__(self):  # dummy nodes
+        self.left = Node(0)
+        self.right = Node(0)
+        self.left.next = self.right
+        self.right.prev = self.left
 
     def get(self, index: int) -> int:
-        if not self.head:
+        curr, count = self.left.next, 0
+        while curr != self.right and count < index:
+            curr = curr.next
+            count += 1
+        if curr == self.right:
             return -1
-
-        nodeCurr = self.head
-        for _ in range(index):
-            if (
-                not nodeCurr.next
-            ):  # check nodeCurr.next to make sure we don't reach nullptr
-                return -1
-            nodeCurr = nodeCurr.next
-        return nodeCurr.val
+        return curr.val
 
     def addAtHead(self, val: int) -> None:
-        newNode = Node(val)
-        if not self.head:
-            self.head = newNode
-        else:
-            newNode.next = self.head
-            self.head = newNode
-        return
+        newNode = Node(val, self.left, self.left.next)
+        self.left.next.prev = newNode
+        self.left.next = newNode
 
     def addAtTail(self, val: int) -> None:
-        newNode = Node(val)
-        if not self.head:
-            self.head = newNode
-        else:
-            nodeCurr = self.head
-            while True:
-                if not nodeCurr.next:
-                    break
-                nodeCurr = nodeCurr.next
-            nodeCurr.next = newNode
-        return
+        newNode = Node(val, self.right.prev, self.right)
+        self.right.prev.next = newNode
+        self.right.prev = newNode
 
     def addAtIndex(self, index: int, val: int) -> None:
-        if not self.head:
-            self.head = Node(val)
-        elif index == 0:
-            self.addAtHead(val)
+        curr, count = self.left.next, 0
+        while curr != self.right and count < index:
+            curr = curr.next
+            count += 1
+        if curr == self.right:
+            if index == 0 or index == count:
+                newNode = Node(val, self.right.prev, self.right)
+                self.right.prev.next = newNode
+                self.right.prev = newNode
+            return
         else:
-            newNode = Node(val)
-            currNode = self.head
-            for i in range(index):
-                if currNode.next == None and i == index - 1:
-                    currNode = currNode.next
-        return
+            newNode = Node(val, curr.prev, curr)
+            curr.prev.next = newNode
+            curr.prev = newNode
 
     def deleteAtIndex(self, index: int) -> None:
-        if not self.head:
+        curr, count = self.left.next, 0
+        while curr != self.right and count < index:
+            curr = curr.next
+            count += 1
+        if curr == self.right:
             return
-        nodeCurr = self.head
+        else:
+            curr.prev.next = curr.next
+            curr.next.prev = curr.prev
+            del curr
 
 
 # Your MyLinkedList object will be instantiated and called as such:

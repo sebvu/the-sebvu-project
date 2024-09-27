@@ -2,23 +2,23 @@
 #include <iostream>
 
 int parentNode(int sequence) {
-  int parent = 1, travel = 0;
+  int parent = 1, upper = 2, lower = 1;
+  if (sequence == 1)
+    return -1;
 
-  for (int i = 1; i <= sequence; i++) {
-    if (travel == parent) {
-      travel = 0, parent++;
-    }
-    travel++;
+  while (true) {
+    if (sequence <= travel && sequence > parent)
+      return parent;
+    parent++;
+    travel += parent;
   }
-  return parent;
 }
 
-int parentNodeGPT(int sequence) {
-  // Using the quadratic formula to find the parent index directly
-  int parent = (-1 + sqrt(1 + 8 * sequence)) / 2;
-
-  // Increment parent by 1 to get the correct parent node value
-  return parent + 1;
-}
-
-int main() { std::cout << parentNodeGPT(6) << std::endl; }
+int main() { std::cout << parentNode(6) << std::endl; }
+// 6
+// is 6 <= 2 and > 1 (no)
+// parent is now 2
+// travel is now 4
+// is 6 <= 4 and 6 > 2
+// parent is now 3
+// travel is now 7

@@ -1,0 +1,61 @@
+.main-container {
+  border: 5px solid green;
+  background: lightgreen;
+  width: 40%;
+  padding: 12px;
+}
+
+div {
+  flex: 1;
+}
+
+#left-salmon-item {
+  flex-grow: 1;
+}
+
+.beige-item,
+.blue-item,
+.purple-item,
+.salmon-item,
+#left-salmon-item {
+  display: flex;
+  padding: 6px;
+  margin: 6px;
+}
+
+.beige-item,
+.purple-item,
+.salmon-item {
+  height: 50px;
+}
+
+.blue-item {
+  border: 5px solid blue;
+  background: lightblue;
+}
+
+.beige-item {
+  border: 5px solid salmon;
+  background: beige;
+}
+
+.red-item {
+  border: 5px solid red;
+  background: pink;
+}
+
+.purple-item {
+  border: 5px solid purple;
+  background: lavender;
+  flex: 2;
+}
+
+#left-salmon-item,
+.salmon-item {
+  border: 5px solid brown;
+  background: lightcoral;
+}
+
+.secondary-container {
+  display: flex;
+}

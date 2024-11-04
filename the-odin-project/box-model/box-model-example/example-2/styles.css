@@ -1,16 +1,30 @@
+* {
+  background: lightyellow;
+}
+
+.doubly-main-container {
+  display: flex;
+}
+
+.secondary-main-container,
 .main-container {
   border: 5px solid green;
   background: lightgreen;
-  width: 40%;
   padding: 12px;
+  margin: 12px;
+}
+
+.secondary-main-container {
+  flex-shrink: 0;
+}
+
+.main-container {
+  flex: 1 1 0;
 }
 
 div {
   flex: 1;
-}
-
-#left-salmon-item {
-  flex-grow: 1;
+  background: transparent;
 }
 
 .beige-item,

@@ -1,0 +1,38 @@
+* {
+  background: lightyellow;
+  text-align: center;
+}
+
+.flex-container-grow,
+.flex-container-shrink,
+.parent-container {
+  display: flex;
+  height: 100px;
+}
+
+.flex-container-grow > div {
+  flex: 1; /* Ensures children grow proportionally */
+  background: peachpuff;
+  border: 4px solid brown;
+}
+
+/* Grow-specific rules */
+.flex-container-grow .two {
+  flex: 2; /* Makes .two grow twice as much as others */
+}
+
+/* Shrink-specific rules */
+.flex-container-shrink {
+  width: 100%;
+}
+
+.flex-container-shrink > div {
+  flex: 1 1 auto;
+  background: peachpuff;
+  border: 4px solid brown;
+  width: 300px;
+}
+
+.flex-container-shrink .two {
+  flex-shrink: 0; /* Prevents shrinking */
+}

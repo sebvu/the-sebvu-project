@@ -25,7 +25,20 @@
       <strong>NEVER</strong> go below specified width, but it will grow outside
       of that.
     </p>
-    <div class="flex-container-shrink">
+    <div class="parent">
+      <div class="flex-container-shrink">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+    </div>
+    <h2>Direction Example</h2>
+    <p>
+      <code lang="css">flex-direction</code> is set to
+      <code lang="css">row</code> by default, however, this is set at
+      <code lang="css">column</code>.
+    </p>
+    <div class="flex-container-direction">
       <div class="one"></div>
       <div class="two"></div>
       <div class="three"></div>

@@ -4,44 +4,87 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Example 2</title>
+    <title>Example 3</title>
   </head>
   <body>
-    <h1>Example 2</h1>
-    <h2>Grow Example</h2>
-    <p>
-      <code lang="css">flex-grow</code> factor of <em>two</em> is 2, so will
-      grow <strong>faster</strong> proportional to one and three.
-    </p>
-    <div class="flex-container-grow">
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
+    <div class="title">
+      <h1>Example 3: Flexbot</h1>
     </div>
-    <h2>Shrink Example</h2>
-    <p>
-      <code lang="css">flex-shrink</code> factor of two is zero, but
-      <code lang="css">flex-grow</code> factor is a 1. So, it will
-      <strong>NEVER</strong> go below specified width, but it will grow outside
-      of that.
-    </p>
-    <div class="parent">
-      <div class="flex-container-shrink">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
+    <div class="supreme-container">
+      <div class="text-container">
+        <h2>flex-grow</h2>
+        <p>
+          In this example, each item stretches relative to its assigned
+          <em>flex-grow</em> property:
+        </p>
+        <ul>
+          <li><strong>Item One:</strong> Has a <em>flex-grow</em> of 1</li>
+          <li><strong>Item Two:</strong> Has a <em>flex-grow</em> of 2</li>
+          <li><strong>Item Three:</strong> Has a <em>flex-grow</em> of 3</li>
+        </ul>
+        <p>
+          Resize the screen to see how each item adapts based on its
+          <em>flex-grow</em> value.
+        </p>
+      </div>
+      <div class="main-container">
+        <div class="one-grow"><strong>one</strong></div>
+        <div class="two-grow"><strong>two</strong></div>
+        <div class="three-grow"><strong>three</strong></div>
       </div>
     </div>
-    <h2>Direction Example</h2>
-    <p>
-      <code lang="css">flex-direction</code> is set to
-      <code lang="css">row</code> by default, however, this is set at
-      <code lang="css">column</code>.
-    </p>
-    <div class="flex-container-direction">
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
+    <div class="supreme-container">
+      <div class="text-container">
+        <h2>flex-shrink</h2>
+        <p>
+          In this example, each item shrinks relative to its assigned
+          <em>flex-shrink</em> property:
+        </p>
+        <ul>
+          <li><strong>Item One:</strong> Has a <em>flex-shrink</em> of 1</li>
+          <li>
+            <strong>Item Two:</strong> Has a <em>flex-shrink</em> of
+            <strong>0</strong>, meaning it will <em>not</em> shrink
+          </li>
+          <li><strong>Item Three:</strong> Has a <em>flex-shrink</em> of 3</li>
+        </ul>
+        <p>
+          Resize the screen to see how each item adjusts based on its
+          <em>flex-shrink</em> value.
+        </p>
+      </div>
+      <div class="main-container">
+        <div class="one-shrink"><strong>one</strong></div>
+        <div class="two-shrink"><strong>two</strong></div>
+        <div class="three-shrink"><strong>three</strong></div>
+      </div>
+    </div>
+    <div class="supreme-container">
+      <div class="text-container">
+        <h2>flex-direction</h2>
+        <p>
+          In this example, we are simply differentiating the two
+          <em>axes</em> of our <em>flex-direction</em> property:
+        </p>
+        <ul>
+          <li><strong>Container 1:</strong> flex-direction: column</li>
+          <li>
+            <strong>Container 2:</strong> flex-direction: row <em>default</em>
+          </li>
+        </ul>
+      </div>
+      <div class="row-container">
+        <div class="main-container-col">
+          <div class="items"><strong>Container One</strong></div>
+          <div class="items"></div>
+          <div class="items"></div>
+        </div>
+        <div class="main-container">
+          <div class="items"><strong>Container Two</strong></div>
+          <div class="items"></div>
+          <div class="items"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

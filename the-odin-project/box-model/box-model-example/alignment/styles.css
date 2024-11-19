@@ -1,0 +1,68 @@
+body {
+  background: lightyellow;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+.master-container {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background: darkgreen;
+  flex: 1;
+  padding: 1em;
+  gap: 1em;
+  height: 300px;
+}
+
+.text-container {
+  border-radius: 25px;
+  background: lightyellow;
+  border: 8px solid black;
+  flex: 2 1 0;
+  padding: 16px;
+}
+
+/* all item and sub-container definitions*/
+
+/* sub-container */
+
+.sub-container {
+  padding: 16px;
+  background: plum;
+  border: 4px solid indigo;
+  display: flex;
+  flex: auto;
+}
+
+.sub-container.one {
+  justify-content: space-between;
+}
+
+.sub-container.two {
+  justify-content: center;
+}
+
+.sub-container.three {
+  justify-content: center;
+  gap: 1em;
+}
+
+/* item */
+
+.item {
+  width: 80px;
+  height: 80px;
+  border: 4px solid darkslategray;
+  background: skyblue;
+}
+
+.item.one {
+  flex: auto;
+}

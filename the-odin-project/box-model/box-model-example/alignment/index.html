@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Alignment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Alignment</h1>
+    <div class="master-container">
+      <div class="text-container">
+        <h2>Default Configuration</h2>
+        <p>
+          Without applying anything else to it, this is the default config. We
+          know what will happen if we apply <code lang="css">flex: 1;</code> it
+          will fill the remaining horizontal space. This is shown with the
+          container most bottom. We added <code lang="css">flex: auto;</code> to
+          the direct .item container resulting in it filling up all the possible
+          vertical space.
+        </p>
+      </div>
+      <div class="sub-container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="sub-container">
+        <div class="item one"></div>
+        <div class="item one"></div>
+        <div class="item one"></div>
+      </div>
+    </div>
+
+    <div class="master-container">
+      <div class="text-container">
+        <h2>Aligning Items</h2>
+        <h3>justify-content:</h3>
+        <p>
+          Justify content aligns items on the <strong>main axis</strong>, we
+          will show you two examples for now: <em>space-between & center</em>.
+        </p>
+      </div>
+      <div class="sub-container one">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="sub-container two">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="text-container">
+        <h2>Differentiating justify-content and align-items</h2>
+        <h3>align-items:</h3>
+        <ul>
+          <li>
+            Aligns items on the <strong>cross-section</strong> by default.
+            <em>(row)</em>
+          </li>
+          <li>
+            When applied to an item with <em>flex-direction: column</em>, will
+            align on the <strong>main-axis</strong>
+          </li>
+        </ul>
+        <h3>justify-content:</h3>
+        <ul>
+          <li>
+            Aligns items on the <strong>main-axis</strong> by default.
+            <em>(row)</em>
+          </li>
+          <li>
+            When applied to an item with <em>flex-direction: column</em>, will
+            align on the <strong>cross-section</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="text-container">
+        <h2>Gap</h2>
+        <p>
+          Applies a gap property between all the items. Super useful. The
+          example has a <code lang="css">justify-content:</code> center and a
+          <code lang="css">gap: 1em.</code>
+        </p>
+      </div>
+      <div class="sub-container three">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </body>
+</html>

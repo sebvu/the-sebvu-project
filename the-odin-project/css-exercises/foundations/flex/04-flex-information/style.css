@@ -40,6 +40,6 @@ img {
 .sub-container div {
   margin: auto;
   text-align: center;
-  width: 200px;
+  max-width: 200px;
 }
 
